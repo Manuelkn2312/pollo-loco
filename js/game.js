@@ -87,6 +87,48 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+function bindBtsTouchEvents() {
+  document.getElementById('leftBtn').addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    keyboard.LEFT = true;
+  });
+
+  document.getElementById('leftBtn').addEventListener('touchend', (e) => {
+    e.preventDefault();
+    keyboard.LEFT = false;
+  });
+
+  document.getElementById('rightBtn').addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    keyboard.RIGHT = true;
+  });
+
+  document.getElementById('rightBtn').addEventListener('touchend', (e) => {
+    e.preventDefault();
+    keyboard.RIGHT = false;
+  });
+
+  document.getElementById('jumpBtn').addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    keyboard.SPACE = true;
+  });
+
+  document.getElementById('jumpBtn').addEventListener('touchend', (e) => {
+    e.preventDefault();
+    keyboard.SPACE = false;
+  });
+
+  document.getElementById('throwBtn').addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    keyboard.Q = true;
+  });
+
+  document.getElementById('throwBtn').addEventListener('touchend', (e) => {
+    e.preventDefault();
+    keyboard.Q = false;
+  });
+}
+
 document.addEventListener("keyup", (event) => {
   switch (event.keyCode) {
     case 39:

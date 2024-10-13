@@ -121,12 +121,12 @@ function bindBtsTouchEvents() {
 
   document.getElementById('throwBtn').addEventListener('touchstart', (e) => {
     e.preventDefault();
-    keyboard.q = true;
+    keyboard.ATTACK = true;
   });
 
   document.getElementById('throwBtn').addEventListener('touchend', (e) => {
     e.preventDefault();
-    keyboard.q = false;
+    keyboard.ATTACK = false;
   });
 }
 

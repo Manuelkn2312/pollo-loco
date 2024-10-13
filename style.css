@@ -1,0 +1,400 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url(img/5_background/complete_background.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+  /* Zeigt den Controller an */
+  .controller {
+    display: none;
+
+  }
+
+  .controller-button {
+display: none;
+  }
+  
+  .controller-row {
+ display: none;
+  }
+
+h1 {
+  font-family: cursive;
+}
+
+.Btn {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+canvas {
+  background-color: black;
+  position: relative;
+  max-width: 100%; /* Canvas passt sich der Bildschirmgröße an */
+  height: auto; /* Höhe proportional zur Breite */
+}
+
+.all-fullscreen {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.Icons img {
+  width: 48px;
+}
+
+.Icons {
+  margin-top: 2px;
+  display: flex;
+  gap: 100px;
+  font-size: 19px;
+}
+
+.action,
+.movement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.action div,
+.movement div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.game-button {
+  width: 149px;
+  height: 45px;
+  border: none;
+  border-radius: 15px;
+  font-size: 19px;
+  z-index: 99999;
+}
+
+.footer {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  border-radius: 10px;
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  width: 40%;
+}
+
+.closeBtn {
+  color: #000000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#openModalBtn {
+  position: fixed;
+  bottom: 5px;
+  right: 20px;
+  width: 90px;
+  height: 38px;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  background-color: #e47600;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.fullscreen-button {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* Responsive Design for Screens Smaller than 768px */
+@media (max-width: 768px) {
+  canvas {
+    width: 80%; /* Canvas wird auf 80% der Bildschirmbreite reduziert */
+    height: auto;
+  }
+
+ /* Versteckt die Icons ab einer Breite von 768px */
+@media (max-width: 768px) {
+  .controller {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 10px;
+    z-index: 999999;
+  }
+
+  .controller-button {
+    width: 60px;
+    height: 60px;
+    background-color: #e47600;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .controller-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .controller-button:active {
+    background-color: #ff6600;
+  }
+  .Icons {
+    display: none; /* Versteckt die Icons */
+  }
+
+  .game-button {
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+
+  #openModalBtn {
+    width: 80px;
+    height: 35px;
+    font-size: 13px;
+  }
+}
+
+/* Responsive Design for Screens Smaller than 480px */
+@media (max-width: 480px) {
+    /* Zeigt den Controller an */
+    .controller {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 10px;
+      z-index: 999999;
+    }
+  
+    .controller-button {
+      width: 60px;
+      height: 60px;
+      background-color: #e47600;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+    }
+    
+    .controller-row {
+      display: flex;
+      gap: 10px;
+    }
+  
+    .controller-button:active {
+      background-color: #ff6600;
+    }
+  }
+  canvas {
+    width: 90%; /* Canvas wird auf 90% der Bildschirmbreite reduziert */
+    height: auto;
+  }
+
+  .Icons {
+    flex-direction: column;
+    gap: 20px;
+    font-size: 12px;
+  }
+
+  .game-button {
+    width: 50px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  #openModalBtn {
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+/* Minimum Width for Small Devices (320px) */
+@media (max-width: 320px) {
+  .controller {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 10px;
+    z-index: 999999;
+  }
+
+  .controller-button {
+    width: 60px;
+    height: 60px;
+    background-color: #e47600;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .controller-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .controller-button:active {
+    background-color: #ff6600;
+  }
+  canvas {
+    width: 100%; /* Canvas nimmt die volle Breite des Bildschirms ein */
+    height: auto;
+  }
+
+  .Icons {
+    width: 50%;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .game-button {
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  #openModalBtn {
+    width: 60px;
+    height: 25px;
+    font-size: 10px;
+  }
+}
+
+/* Text-Overlay für Hinweis */
+.rotate-message {
+  display: none; /* Standardmäßig unsichtbar */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* CSS für Portrait-Modus */
+@media screen and (orientation:portrait) {
+  .rotate-message {
+    display: block; /* Zeigt den Text im Portrait-Modus an */
+  }
+
+  body {
+    overflow: hidden; /* Verhindert das Scrollen, während die Nachricht angezeigt wird */
+  }
+}
+
+/* CSS für Landscape-Modus */
+@media screen and (orientation:landscape) {
+  .rotate-message {
+    display: none; /* Versteckt den Text im Landscape-Modus */
+  }
+
+  canvas {
+    width: 80%; /* Canvas wird im Landscape-Modus auf 80% der Bildschirmbreite begrenzt */
+    height: auto;
+  }
+
+  .Icons {
+    flex-direction: row;
+    gap: 50px;
+    font-size: 16px;
+  }
+
+  .game-button {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .modal-content {
+    width: 60%;
+  }
+
+  #openModalBtn {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+}

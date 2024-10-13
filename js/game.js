@@ -50,6 +50,7 @@ function startGame() {
   world.setWorld();
   world.run();
   world.draw();
+  bindBtsTouchEvents();
 }
 
 fullScreenButton.addEventListener("click", async () => {

@@ -329,7 +329,7 @@ class World {
 
       this.ctx.drawImage(gameOverImage, centerX, centerY, imageWidth, imageHeight);
       this.clearButtons();
-      this.createCenteredButton("Retry", () => location.reload(), 250, 20);
+      this.createCenteredButton("", () => location.reload(), 250, 20);
     };
     gameOverImage.onerror = () => {
       console.error("Failed to load image:", gameOverImage.src);

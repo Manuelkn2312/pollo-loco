@@ -15,6 +15,11 @@ body {
     display: none;
 
   }
+  .dama{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .controller-button {
 display: none;
@@ -158,18 +163,21 @@ canvas {
 @media (max-width: 768px) {
   .controller {
     display: flex;
-    flex-direction: column;
+    justify-content: end;
+    flex-direction: row;
     position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 10px;
+    gap: 227px;
     z-index: 999999;
+  }
+  .dama{
+    display: flex;
+    justify-content: center;
+    align-items: end;
   }
 
   .controller-button {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     background-color: #e47600;
     border: none;
     border-radius: 50%;
@@ -204,9 +212,9 @@ canvas {
   }
 
   #openModalBtn {
-    width: 80px;
-    height: 35px;
-    font-size: 13px;
+    width: 70px;
+    height: 30px;
+    font-size: 10px;
   }
 }
 
@@ -215,18 +223,21 @@ canvas {
     /* Zeigt den Controller an */
     .controller {
       display: flex;
-      flex-direction: column;
+      justify-content: end;
+      flex-direction: row;
       position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      gap: 10px;
+      gap: 124px;
       z-index: 999999;
+    }
+    .dama{
+      display: flex;
+      justify-content: center;
+      align-items: end;
     }
   
     .controller-button {
-      width: 60px;
-      height: 60px;
+      width: 30px;
+      height: 30px;
       background-color: #e47600;
       border: none;
       border-radius: 50%;
@@ -269,9 +280,9 @@ canvas {
   }
 
   #openModalBtn {
-    width: 70px;
-    height: 30px;
-    font-size: 12px;
+    width: 67px;
+    height: 28px;
+    font-size: 10px;
   }
 }
 
@@ -279,18 +290,21 @@ canvas {
 @media (max-width: 320px) {
   .controller {
     display: flex;
-    flex-direction: column;
+    justify-content: end;
+    flex-direction: row;
     position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 10px;
+    gap: 124px;
     z-index: 999999;
+  }
+  .dama{
+    display: flex;
+    justify-content: center;
+    align-items: end;
   }
 
   .controller-button {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     background-color: #e47600;
     border: none;
     border-radius: 50%;
@@ -332,9 +346,9 @@ canvas {
   }
 
   #openModalBtn {
-    width: 60px;
-    height: 25px;
-    font-size: 10px;
+    width: 55px;
+    height: 20px;
+    font-size: 8px;
   }
 }
 
@@ -373,7 +387,7 @@ canvas {
 
   canvas {
     width: 80%; /* Canvas wird im Landscape-Modus auf 80% der Bildschirmbreite begrenzt */
-    height: auto;
+    height: 80%;
   }
 
   .Icons {
